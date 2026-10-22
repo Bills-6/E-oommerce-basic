@@ -10,6 +10,8 @@ import { categoryData } from "./lib/mappings/dataCategory";
 import SidebarHomeMobile from "./components/sidebar";
 import CategoryCard from "./components/categoryCard";
 import EntryTitle from "./components/entryTitle";
+import Slider from './components/slider';
+import LastestProducts from './components/lastestProducts';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +24,7 @@ export default function Home() {
     <div className="root text-zinc-700 h-[30000px]">
       <SidebarHomeMobile active={isOpen} onClose={handleOpenSidebarMobile} />
 
-      <header className="flex items-center justify-between h-15">
+      <header className="flex px-5 items-center justify-between h-15">
         <div className="leftHeader flex items-center gap-2">
           <div className="logos">
             <a href="" className="font-bold text-2xl">JmoX</a>
@@ -41,7 +43,7 @@ export default function Home() {
           </button>
         </div>
       </header>
-        <search className="py- md:hidden mb-7" aria-description="searchBar_mobile">
+        <search className="py-2 px-5 md:hidden mb-7" aria-description="searchBar_mobile">
           <form className="relative">
             <input className="bg-zinc-200 h-10 w-full outline-2 outline-zinc-300 rounded-md shadow-md px-5 ps-10" name="search_product" placeholder="Cari produk" type="search" />
 
@@ -49,25 +51,15 @@ export default function Home() {
           </form>
         </search>
 
-        {/* banner promo */}
+        {/* banner */}
+        <Slider />
      
 
-        <main className='py-4'>
+        <main className='py-4 px-5'>
           <section className='py-10' aria-label='flashSalePage'>
-            <header className='flex items-center justify-between'>
-              <EntryTitle key={1} value="Flash Sale 🎉" />
+              <EntryTitle key={0} value='Lastest'/>
+              <LastestProducts/>
 
-            </header>
-              <div className="urgancyTextParent flex items-center gap-4 mb-5">
-                <p className='urgancyText'>Berakhir dalam: </p>
-                <div className="timeCountdown flex items-center gap-2 text-white">
-                  <div className="boxHours w-7 h-7 bg-zinc-900 font-bold full-center rounded-md">05</div>
-                  <div className="boxMinutes w-7 h-7 bg-zinc-900 font-bold full-center rounded-md">12</div>
-                  <div className="boxSecaonds w-7 h-7 bg-zinc-900 font-bold full-center rounded-md">02</div>
-                </div>
-              </div>
-
-              <div className="cards py-1 bg-red-400"></div>
           </section>
         </main>
     </div>

@@ -5,3 +5,26 @@
   justify-content: center;
   align-items: center;
 }
+
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  opacity: 0.5;
+  background: white;
+  transition: 0.3s;
+}
+.swiper-pagination-bullet-active {
+  width: 28px !important;
+  border-radius: 10px !important;
+  opacity: 1 !important;
+}
+
+.controllerSwiper .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
