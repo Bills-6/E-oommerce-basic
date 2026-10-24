@@ -19,7 +19,10 @@
   opacity: 1 !important;
 }
 
-.controllerSwiper .swiper-pagination {
+.controllerSwiper .swiper-pagination,
+.controllerSwiper .swiper-preview-pagination,
+.controllerSwiper .swiper-category-pagination
+ {
   position: relative !important;
   bottom: auto !important;
   left: auto !important;

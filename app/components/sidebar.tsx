@@ -40,7 +40,7 @@ export default function SidebarHomeMobile({ active, onClose }: SidebarProps) {
 			<button className='w-[40%] inset-0 left-0 top-0 h-screen fixed z-[122] bg-zinc-700/70' onClick={onClose}></button>
 		)}
 
-		<aside className={`fixed w-[70%] right-0 top-0 h-screen bg-white shadow-md rounded-tl-2xl overflow-hidden rounded-bl-2xl z-[200] transition-all ${active ? '' : 'translate-x-200'} `}>
+		<aside className={`fixed w-[70%] right-0 top-0 h-screen bg-white shadow-md rounded-tl-2xl overflow-hidden rounded-bl-2xl z-[200] transition-all ${active ? '' : 'translate-x-400 hidden'} `}>
 			<header className="p-5 bg-blue-500">
 				<div className="title flex items-center justify-between mb-5">
 					<div className="logos flex items-center gap-3">

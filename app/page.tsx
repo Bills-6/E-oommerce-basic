@@ -8,10 +8,10 @@ import { categoryData } from "./lib/mappings/dataCategory";
 
 // component
 import SidebarHomeMobile from "./components/sidebar";
-import CategoryCard from "./components/categoryCard";
 import EntryTitle from "./components/entryTitle";
 import Slider from './components/slider';
 import LastestProducts from './components/lastestProducts';
+import ByCategory from './components/shopByCategory';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,9 +57,8 @@ export default function Home() {
 
         <main className='py-4 px-5'>
           <section className='py-10' aria-label='flashSalePage'>
-              <EntryTitle key={0} value='Lastest'/>
               <LastestProducts/>
-
+              <ByCategory />
           </section>
         </main>
     </div>

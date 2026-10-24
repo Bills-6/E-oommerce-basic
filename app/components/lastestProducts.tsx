@@ -8,10 +8,15 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+// component
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import EntryTitle from "./entryTitle";
+
 export default function LastestProducts() {
 	return (
 		<Suspense fallback={<div className="p-5 bg-red-300"></div>}>
 			<div className="lastestProductContainer py-2">
+				<EntryTitle value="Lastest"/>
 				<Swiper 
 					modules={[Navigation, Pagination]}
 					spaceBetween={20}
@@ -35,10 +40,14 @@ export default function LastestProducts() {
 					<SwiperSlide className="flex bg-green-500"></SwiperSlide>
 				</Swiper>
 
-				<div className="controllerSwiper py-1 bg-pink-200 flex items-center justify-center gap-3">
-					<button className="prevBtn static w-10 h-10 bg-red-500 cursor-pointer"></button>
+				<div className="controllerSwiper py-1 flex items-center justify-center gap-3">
+					<button className="prevBtn static w-10 h-10 cursor-pointer full-center">
+						<ChevronLeft/>
+					</button>
 					<div className="swiper-pagination relative w-24 overflow-hidden flex items-center gap-2"></div>
-					<button className="nextBtn static w-10 h-10 bg-green-500 cursor-pointer"></button>
+					<button className="nextBtn static w-10 h-10 cursor-pointer full-center">
+						<ChevronRight/>
+					</button>
 				</div>
 			</div>
 		</Suspense>
