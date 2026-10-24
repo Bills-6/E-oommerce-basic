@@ -6,6 +6,6 @@ interface EntryTypes {
 
 export default function EntryTitle({ value='Unknow title' }: EntryTypes) {
 	return (
-		<h2 className="font-semibold text-2xl mb-3">{value}</h2>
+		<h2 className="font-bold text-2xl lg:text-4xl mb-3">{value}</h2>
 	);
 }

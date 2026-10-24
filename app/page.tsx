@@ -12,6 +12,8 @@ import EntryTitle from "./components/entryTitle";
 import Slider from './components/slider';
 import LastestProducts from './components/lastestProducts';
 import ByCategory from './components/shopByCategory';
+import BestSellerPage from './components/bestSeller';
+import AboutPage from './components/aboutBrand';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,12 +55,13 @@ export default function Home() {
 
         {/* banner */}
         <Slider />
-     
 
-        <main className='py-4 px-5'>
+        <main className='py-4'>
           <section className='py-10' aria-label='flashSalePage'>
               <LastestProducts/>
               <ByCategory />
+              <BestSellerPage />
+              <AboutPage />
           </section>
         </main>
     </div>

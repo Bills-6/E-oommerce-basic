@@ -13,24 +13,38 @@ import 'swiper/css/navigation';
 // component
 import EntryTitle from "./entryTitle";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ViewAll from "./base/viewAll";
 
 export default function ByCategory() {
 	return (
 		<Suspense fallback={<div className="b-5 bg-red-500"></div>}>
-			<div className="py-16">
-				<EntryTitle value="Shop By Category"/>
+			<div className="py-16 ">
+					<EntryTitle value="Shop By Category"/>
 
 				<Swiper
 					modules={[Navigation, Pagination]}
-					spaceBetween={20}
-					slidesPerView={1.5}
 					navigation={{prevEl: '.prevButtonCategory', nextEl: '.nextButtonCategory',}}
 					pagination={{el: '.swiper-category-pagination', clickable: true, type: 'bullets'}}
 					loop={false}
+					breakpoints={{
+						320: {
+							slidesPerView: 1.5,
+							spaceBetween: 20,
+						},
+						1024: {
+							slidesPerView: 4.5,
+							spaceBetween: 40,
+						}
+					}}
 					className="overflow-hidden h-64 mb-5"
 				>
 					<SwiperSlide className="flex bg-purple-500"></SwiperSlide>
 					<SwiperSlide className="flex bg-yellow-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-pink-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-green-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-gray-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-zinc-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-emerald-500"></SwiperSlide>
 					<SwiperSlide className="flex bg-blue-500"></SwiperSlide>
 				</Swiper>
 
@@ -47,7 +61,7 @@ export default function ByCategory() {
 				</div>
 
 
-			</div>
+			</div>		
 		</Suspense>
 	);
 }

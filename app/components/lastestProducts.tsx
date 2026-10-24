@@ -11,12 +11,17 @@ import 'swiper/css/pagination';
 // component
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import EntryTitle from "./entryTitle";
+import ViewAll from "./base/viewAll";
 
 export default function LastestProducts() {
 	return (
 		<Suspense fallback={<div className="p-5 bg-red-300"></div>}>
-			<div className="lastestProductContainer py-2">
-				<EntryTitle value="Lastest"/>
+			<div className="lastestProductContainer py-2 md:hidden ">
+				<div className="flex items-center justify-between mb-6">
+					<EntryTitle value="Lastest"/>
+					<ViewAll href="#lastest" />
+				</div>
+				
 				<Swiper 
 					modules={[Navigation, Pagination]}
 					spaceBetween={20}
@@ -31,7 +36,7 @@ export default function LastestProducts() {
 						type: 'bullets'
 					}}
 					loop={false}
-					className="overflow-hidden h-64 mb-5"
+					className="swiper-lastest overflow-hidden h-64 mb-5"
 					>
 					<SwiperSlide className="flex bg-red-500"></SwiperSlide>
 					<SwiperSlide className="flex bg-yellow-500"></SwiperSlide>
@@ -48,6 +53,20 @@ export default function LastestProducts() {
 					<button className="nextBtn static w-10 h-10 cursor-pointer full-center">
 						<ChevronRight/>
 					</button>
+				</div>
+			</div>
+
+			<div className="lastestProductDesktop hidden md:block py-5 bg-zinc-300">
+				<div className="container mx-auto">
+					<EntryTitle value="Lastest" />
+				<div className="productCard grid grid-cols-3 gap-4">
+					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest h-32 bg-red-500"></article>
+				</div>
 				</div>
 			</div>
 		</Suspense>
