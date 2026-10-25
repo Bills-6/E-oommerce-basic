@@ -32,8 +32,15 @@
   gap: 8px;
 }
 
-@media screen and (min-width: 769px) {
-  .swiper-lastest {
-    display: none !important;
-  }
+.hover-button-primary:hover {
+  background-color: #111111;
+  box-shadow: 0 0 5px #000;
+  transition-duration: 0.2s;
+}
+.hover-shadow-blue:hover {
+  background-color: white;
+  border-color: white;
+  box-shadow: 0 0 30px rgb(85, 255, 255);
+  cursor: pointer;
+  transition-duration: 0.5s;
 }

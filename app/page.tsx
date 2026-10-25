@@ -14,6 +14,7 @@ import LastestProducts from './components/lastestProducts';
 import ByCategory from './components/shopByCategory';
 import BestSellerPage from './components/bestSeller';
 import AboutPage from './components/aboutBrand';
+import NewSteller from './components/newsteller';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,6 +63,7 @@ export default function Home() {
               <ByCategory />
               <BestSellerPage />
               <AboutPage />
+              <NewSteller />
           </section>
         </main>
     </div>

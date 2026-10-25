@@ -18,8 +18,9 @@ import ViewAll from "./base/viewAll";
 export default function ByCategory() {
 	return (
 		<Suspense fallback={<div className="b-5 bg-red-500"></div>}>
-			<div className="py-16 ">
-					<EntryTitle value="Shop By Category"/>
+			<div className="py-16 px-5">
+				<div className="container mx-auto">
+				<EntryTitle value="Shop By Category"/>
 
 				<Swiper
 					modules={[Navigation, Pagination]}
@@ -59,8 +60,7 @@ export default function ByCategory() {
 						<ChevronRight />
 					</button>
 				</div>
-
-
+				</div>
 			</div>		
 		</Suspense>
 	);
