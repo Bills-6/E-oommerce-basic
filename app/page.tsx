@@ -3,8 +3,6 @@
 // react method
 import { useState, useEffect } from 'react';
 
-// data mapping
-import { categoryData } from "./lib/mappings/dataCategory"; 
 
 // component
 import SidebarHomeMobile from "./components/sidebar";
@@ -15,6 +13,8 @@ import ByCategory from './components/shopByCategory';
 import BestSellerPage from './components/bestSeller';
 import AboutPage from './components/aboutBrand';
 import NewSteller from './components/newsteller';
+import Footer from './components/footer';
+import NavBottomHome from './components/navBottom';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   return (
-    <div className="root text-zinc-700 h-[30000px]">
+    <div className="root text-zinc-700">
       <SidebarHomeMobile active={isOpen} onClose={handleOpenSidebarMobile} />
 
       <header className="flex px-5 items-center justify-between h-15">
@@ -57,15 +57,19 @@ export default function Home() {
         {/* banner */}
         <Slider />
 
-        <main className='py-4'>
-          <section className='py-10' aria-label='flashSalePage'>
+        <main className=''>
+          <section className='' aria-label='flashSalePage'>
               <LastestProducts/>
               <ByCategory />
               <BestSellerPage />
               <AboutPage />
               <NewSteller />
+              <Footer />
           </section>
         </main>
+
+        {/* navbar bottom mobile */}
+        <NavBottomHome />
     </div>
   );
 }

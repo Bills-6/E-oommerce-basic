@@ -7,7 +7,7 @@ import EntryTitle from "./entryTitle";
 
 export default function BestSellerPage() {
 	return (
-		<div className="py-5 px-5">
+		<div className="px-5 py-25">
 			<div className="container mx-auto ">
 				<EntryTitle value="Best Seller 🔥"/>
 

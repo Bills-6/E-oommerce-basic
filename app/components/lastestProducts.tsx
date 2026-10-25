@@ -16,7 +16,7 @@ import ViewAll from "./base/viewAll";
 export default function LastestProducts() {
 	return (
 		<Suspense fallback={<div className="p-5 bg-red-300"></div>}>
-			<div className="lastestProductContainer py-2 md:hidden ">
+			<div className="lastestProductContainer p-5 md:hidden ">
 				<div className="flex items-center justify-between mb-6">
 					<EntryTitle value="Lastest"/>
 					<ViewAll href="#lastest" />
@@ -56,7 +56,7 @@ export default function LastestProducts() {
 				</div>
 			</div>
 
-			<div className="lastestProductDesktop hidden md:block py-5 bg-zinc-300">
+			<div className="lastestProductDesktop hidden md:block p-5 bg-zinc-300">
 				<div className="container mx-auto">
 					<EntryTitle value="Lastest" />
 				<div className="productCard grid grid-cols-3 gap-4">

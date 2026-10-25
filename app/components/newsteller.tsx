@@ -31,8 +31,8 @@ function LiSocial(
 
 export default function NewSteller() {
 	return (
-		<section className="py-20 px-5 bg-purple-200">
-			<div className="container mx-auto grid gap-4">
+		<section className="py-20 px-5">
+			<div className="container mx-auto grid gap-4 md:grid-cols-2 md:items-center md:gap-20">
 				<div className="content">
 					<EntryTitle value="Newsletter"/>
 
@@ -52,10 +52,10 @@ export default function NewSteller() {
 						</li>
 					</ul>
 
-					<form className="subscribeWrapper flex flex-col gap-4">
-						<input className="bg-zinc-200 h-15 rounded-md px-5" placeholder="Enter your email address" type="email" name="subscribeMail" />
+					<form className="subscribeWrapper flex flex-col gap-4 lg:flex-row">
+						<input className="bg-zinc-200 h-15 rounded-md px-5 lg:grow" placeholder="Enter your email address" type="email" name="subscribeMail" />
 
-						<button className="bg-blue-500 text-white text-lg tracking-wide h-15 rounded-md hover-button-primary cursor-pointer" type="button">Subscribe</button>
+						<button className="bg-blue-500 text-white text-lg tracking-wide h-15 rounded-md hover-button-primary cursor-pointer lg:px-10" type="button">Subscribe</button>
 					</form>
 				</div>
 				<div className="social">
