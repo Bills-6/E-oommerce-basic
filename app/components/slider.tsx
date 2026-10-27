@@ -14,7 +14,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 export default function Slider() {
 	return (
 		<Suspense fallback={<div className="p-5 bg-red-300"></div>}>
-		<div className="w-full max-w-4xl md:max-w-none py-10 pb-5 lg:relative">
+		<div className="w-full max-w-4xl md:max-w-none pt-40 pb-5 lg:relative">
 			<Swiper
 				modules={[Navigation, Pagination, Autoplay]}
 				navigation={{

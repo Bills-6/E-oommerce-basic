@@ -44,3 +44,10 @@
   cursor: pointer;
   transition-duration: 0.5s;
 }
+
+.hover-nav-bottom {
+  transition: 0.3s;
+}
+.hover-nav-bottom:hover {
+  scale: 1.1;
+}
