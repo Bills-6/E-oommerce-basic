@@ -18,7 +18,13 @@ function SearchBar() {
 	);
 }
 
-export default function HeaderTop() {
+type TypeToggle = {
+	toggle: () => void;
+}
+
+export default function HeaderTop(
+	{ toggle }: TypeToggle
+) {
 	const [isInvisible, setIsInvisible] = useState(true);
 	const lastScrollY = useRef(0);
 
@@ -48,7 +54,6 @@ export default function HeaderTop() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
-
 	const handleNavClick = () => {
 		setIsInvisible(true);
 	}
@@ -64,7 +69,7 @@ export default function HeaderTop() {
 			<div className="container mx-auto">
 				{/* mobile Layout */}
 				<div className="mobileWrapper flex items-center justify-between mb-5 pt-6">
-					<button className="hamburger w-10 h-10 text-3xl full-center" type="button">
+					<button className="hamburger w-10 h-10 text-3xl full-center" type="button" onClick={toggle}>
 						<RxHamburgerMenu />
 					</button>
 					<a className="" href="#">Jmox</a>
@@ -73,6 +78,15 @@ export default function HeaderTop() {
 					</button>
 				</div>
 				<SearchBar />
+				<nav className="navLarge hidden md:block pt-4">
+					<ul className="flex items-center gap-5 uppercase">
+						<li className="">All product</li>
+						<li className="">keyboard</li>
+						<li className="">keycaps</li>
+						<li className="">accesories</li>
+						<li className="">download</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 	);

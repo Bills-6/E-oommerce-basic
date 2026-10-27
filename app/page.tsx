@@ -21,16 +21,16 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleOpenSidebarMobile() {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   }
 
 
 
   return (
     <div className="root text-zinc-700">
-      <SidebarHomeMobile active={isOpen} onClose={handleOpenSidebarMobile} />
+      <SidebarHomeMobile active={isOpen} />
       {/* <div className='bar-promo h-15 bg-red-300'></div> */}
-      <HeaderTop />
+      <HeaderTop toggle={handleOpenSidebarMobile} />
 
         {/* banner */}
         <Slider />
