@@ -12,7 +12,7 @@ type ListTypeProps = {
 	name: string | undefined;
 }
 
-interface SidebarProps {
+type SidebarProps = {
 	active: boolean;
 }
 

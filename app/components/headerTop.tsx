@@ -18,7 +18,7 @@ function SearchBar() {
 		<search className="w-full h-13 rounded-lg border bg-zinc-100 overflow-hidden relative">
 			<input className="w-full h-full px-5 pe-15" placeholder="Search here" type="search" name="search" />
 
-			<button className="absolute w-10 h-10 top-1/2 -translate-y-1/2 right-2 bg-pink-200 full-center text-2xl" type="button">
+			<button className="absolute w-10 h-10 top-1/2 -translate-y-1/2 right-2 full-center text-2xl" type="button">
 				<BsSearch />
 			</button>
 		</search>
@@ -116,7 +116,7 @@ export default function HeaderTop(
 					<SearchBar />
 
 					{/* type money */}
-					<div className="flex items-center gap-3 w-44">
+					<div className="items-center hidden lg:flex gap-3 w-44">
 						<span>Indonesian</span>
 						<span>(IDR Rp)</span>
 					</div>

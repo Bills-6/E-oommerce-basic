@@ -17,26 +17,14 @@ import Footer from './components/footer';
 import NavBottomHome from './components/navBottom';
 import HeaderTop from './components/headerTop';
 
+import { useSidebar } from './context/SidebarContext.';
+
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleOpenSidebarMobile() {
-    setIsOpen((prev) => !prev);
-  }
-
-// lock scroll code ===
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-
-    return () => {
-      document.body.style.overflow = '';
-    }
-  }, [isOpen]);
+  const { isOpen, handleOpenSidebarMobile } = useSidebar();
 
   return (
     <div className="root text-zinc-700">
       <SidebarHomeMobile active={isOpen} />
-      {/* <div className='bar-promo h-15 bg-red-300'></div> */}
       <HeaderTop toggle={handleOpenSidebarMobile} />
 
         {/* banner */}
