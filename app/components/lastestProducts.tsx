@@ -72,16 +72,64 @@ export default function LastestProducts() {
 				</div>
 			</div>
 
-			<div className="lastestProductDesktop hidden md:block p-5 bg-zinc-300">
+			<div className="lastestProductDesktop hidden md:block p-5">
 				<div className="container mx-auto">
 					<EntryTitle value="Lastest" />
 				<div className="productCard grid grid-cols-3 gap-4">
-					<article className="productLastest h-32 bg-red-500"></article>
-					<article className="productLastest h-32 bg-red-500"></article>
-					<article className="productLastest h-32 bg-red-500"></article>
-					<article className="productLastest h-32 bg-red-500"></article>
-					<article className="productLastest h-32 bg-red-500"></article>
-					<article className="productLastest h-32 bg-red-500"></article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
+					<article className="productLastest">
+						<a href="#">
+							<img className="h-64 w-full bg-zinc-300 mb-4" src="/" alt="" />
+						</a>
+						<div className="description">
+							<h5 className="productName font-semibold text-2xl mb-2">Keyboard KeyFo 31</h5>
+							<span className="productPrice font-bold text-3xl">$80.00</span>
+						</div>
+					</article>
 				</div>
 				</div>
 			</div>

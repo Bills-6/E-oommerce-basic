@@ -6,6 +6,10 @@ import { CiShoppingCart } from "react-icons/ci";
 import { BiBookmarkHeart } from "react-icons/bi";
 import { RiAccountCircleLine } from "react-icons/ri";
 
+// dummy media icon
+import { FaSquareXTwitter, FaSquareInstagram, FaDiscord } from "react-icons/fa6";
+
+
 // react property
 import { useState, useEffect, useRef } from "react";
 
@@ -74,6 +78,29 @@ export default function HeaderTop(
 					<button className="hamburger w-10 h-10 text-3xl full-center" type="button" onClick={toggle}>
 						<RxHamburgerMenu />
 					</button>
+					{/* start media link in desktop */}
+					<div className="mediaDesktop hidden lg:block">
+						<ul className="flex items-center gap-4">
+							<li className="w-10 h-10">
+								<a className="full-center w-full h-full text-3xl" href="#">
+									<FaSquareXTwitter />
+								</a>
+							</li>
+							<li className="w-10 h-10">
+								<a className="full-center w-full h-full text-3xl" href="#">
+									<FaSquareInstagram />
+								</a>
+							</li>
+							<li className="h-10 flex items-center gap-2">
+								<a className="full-center w-10 h-full text-3xl" href="#">
+									<FaDiscord  />
+								</a>
+								<p className="text-md">Join Discord</p>
+							</li>
+						</ul>
+					</div>
+					{/* end media link in desktop */}
+					
 					<a className="font-bold text-2xl lg:text-3xl" href="#">Jmox</a>
 					<div className="fitures flex items-center gap-5">
 						<button className="cart w-10 h-10 full-center text-3xl" type="button">
@@ -88,6 +115,12 @@ export default function HeaderTop(
 				<div className="container mx-auto flex items-center gap-5">
 					<SearchBar />
 
+					{/* type money */}
+					<div className="flex items-center gap-3 w-44">
+						<span>Indonesian</span>
+						<span>(IDR Rp)</span>
+					</div>
+					
 					<button className="w-10 h-10 text-4xl hidden lg:flex items-center justify-center cursor-pointer hover:scale-[1.1] transition-all" type="button">
 						<RiAccountCircleLine />
 					</button>
