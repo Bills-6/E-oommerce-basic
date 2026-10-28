@@ -36,7 +36,7 @@ export default function SidebarHomeMobile({ active }: SidebarProps) {
 		<aside className={`fixed w-[90%] left-0 top-[calc(24px+40px)] h-[calc(100dvh-(24px+40px))] bg-white shadow-md overflow-hidden z-[200] transition-all duration-400 p-5 flex flex-col justify-between 
 			${
 				active
-				? '' : '-translate-x-400'
+				? '' : '-translate-x-400 hidden'
 			}
 		`}>
 			<ul className='categoryList'>

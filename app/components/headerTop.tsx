@@ -3,6 +3,9 @@
 import { BsSearch } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CiShoppingCart } from "react-icons/ci";
+import { BiBookmarkHeart } from "react-icons/bi";
+import { RiAccountCircleLine } from "react-icons/ri";
+
 // react property
 import { useState, useEffect, useRef } from "react";
 
@@ -67,19 +70,30 @@ export default function HeaderTop(
 			}
 		`}>
 			<div className="container mx-auto">
-				{/* mobile Layout */}
-				<div className="mobileWrapper flex items-center justify-between mb-5 pt-6">
+				<div className="flex items-center justify-between mb-5 pt-6">
 					<button className="hamburger w-10 h-10 text-3xl full-center" type="button" onClick={toggle}>
 						<RxHamburgerMenu />
 					</button>
-					<a className="" href="#">Jmox</a>
-					<button className="whilist w-10 h-10 full-center text-3xl" type="button">
-						<CiShoppingCart />
+					<a className="font-bold text-2xl lg:text-3xl" href="#">Jmox</a>
+					<div className="fitures flex items-center gap-5">
+						<button className="cart w-10 h-10 full-center text-3xl" type="button">
+							<CiShoppingCart />
+						</button>
+
+						<button className="whilist w-10 h-10 full-center text-3xl" type="button">
+							<BiBookmarkHeart />
+						</button>
+					</div>
+				</div>
+				<div className="container mx-auto flex items-center gap-5">
+					<SearchBar />
+
+					<button className="w-10 h-10 text-4xl hidden lg:flex items-center justify-center cursor-pointer hover:scale-[1.1] transition-all" type="button">
+						<RiAccountCircleLine />
 					</button>
 				</div>
-				<SearchBar />
 				<nav className="navLarge hidden md:block pt-4">
-					<ul className="flex items-center gap-5 uppercase">
+					<ul className="flex items-center gap-10 uppercase w-fit mx-auto">
 						<li className="">All product</li>
 						<li className="">keyboard</li>
 						<li className="">keycaps</li>

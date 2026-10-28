@@ -1,7 +1,7 @@
 'use client'
 
 // react method
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 // component
@@ -24,7 +24,14 @@ export default function Home() {
     setIsOpen((prev) => !prev);
   }
 
+// lock scroll code ===
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
 
+    return () => {
+      document.body.style.overflow = '';
+    }
+  }, [isOpen]);
 
   return (
     <div className="root text-zinc-700">
