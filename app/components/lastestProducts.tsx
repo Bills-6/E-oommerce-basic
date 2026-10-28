@@ -36,13 +36,29 @@ export default function LastestProducts() {
 						type: 'bullets'
 					}}
 					loop={false}
-					className="swiper-lastest overflow-hidden h-64 mb-5"
+					className="swiper-lastest overflow-hidden h-[300px] mb-5"
 					>
-					<SwiperSlide className="flex bg-red-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-yellow-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-pink-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-purple-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-green-500"></SwiperSlide>
+					<SwiperSlide className="flex">
+						<img className="bg-zinc-300 h-52 rounded-md mb-2" src="/" alt="image" />
+						<div className="descSlide">
+							<h6 className="productName text-lg">Keyboard CaKya 88</h6>
+							<span className="font-bold text-xl">$8.00</span>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide className="flex">
+						<img className="bg-zinc-300 h-52 rounded-md mb-2" src="/" alt="image" />
+						<div className="descSlide">
+							<h6 className="productName text-lg">Keyboard CaKya 88</h6>
+							<span className="font-bold text-xl">$8.00</span>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide className="flex">
+						<img className="bg-zinc-300 h-52 rounded-md mb-2" src="/" alt="image" />
+						<div className="descSlide">
+							<h6 className="productName text-lg">Keyboard CaKya 88</h6>
+							<span className="font-bold text-xl">$8.00</span>
+						</div>
+					</SwiperSlide>
 				</Swiper>
 
 				<div className="controllerSwiper py-1 flex items-center justify-center gap-3">

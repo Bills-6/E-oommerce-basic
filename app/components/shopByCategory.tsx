@@ -37,16 +37,20 @@ export default function ByCategory() {
 							spaceBetween: 40,
 						}
 					}}
-					className="overflow-hidden h-64 mb-5"
+					className="overflow-hidden h-48 mb-5"
 				>
-					<SwiperSlide className="flex bg-purple-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-yellow-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-pink-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-green-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-gray-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-zinc-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-emerald-500"></SwiperSlide>
-					<SwiperSlide className="flex bg-blue-500"></SwiperSlide>
+					<SwiperSlide className="flex bg-zinc-200 relative overflow-hidden rounded-lg">
+						<a className="w-full h-full block" href="#"></a>
+						<h5 className="absolute bottom-5 left-5 font-bold uppercase">All Product</h5>
+					</SwiperSlide>
+					<SwiperSlide className="flex bg-zinc-200 relative overflow-hidden rounded-lg">
+						<a className="w-full h-full block" href="#"></a>
+						<h5 className="absolute bottom-5 left-5 font-bold uppercase">Keyboard</h5>
+					</SwiperSlide>
+					<SwiperSlide className="flex bg-zinc-200 relative overflow-hidden rounded-lg">
+						<a className="w-full h-full block" href="#"></a>
+						<h5 className="absolute bottom-5 left-5 font-bold uppercase">Keycaps</h5>
+					</SwiperSlide>
 				</Swiper>
 
 				<div className="controllerSwiper flex items-center justify-center gap-3">

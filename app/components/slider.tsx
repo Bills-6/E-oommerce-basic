@@ -38,7 +38,7 @@ export default function Slider() {
 				}}
 				className="swiperContainer rounded-lg overflow-hidden w-full h-64 lg:h-[600px] bg-pink-100">
 
-				<SwiperSlide className="flex bg-blue-300 md:relative">
+				<SwiperSlide className="flex bg-pink-300 md:relative">
 
 					<div className="descriptionProductContainer container hidden lg:block absolute top-1/2 -translate-y-1/2 p-5 left-1/2 -translate-x-1/2">
 						<h2 className="productName font-bold text-5xl mb-3 text-shadow-[-7px_10px_5px_rgba(0,0,0,0.5)]">Keyboard 
