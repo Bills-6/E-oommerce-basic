@@ -4,8 +4,8 @@
 //  HEADER NAV TYPES ===============
 type HeaderNavTypes = {
 	padding?: string;
-	heading: string;
-	path: string;
+	heading?: string;
+	path?: string;
 }
 export default function HeaderNav(
 	{ padding, heading = 'page?' }

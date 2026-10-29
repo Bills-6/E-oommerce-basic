@@ -4,7 +4,7 @@ import HeaderTop from "../components/headerTop";
 import NavBottomHome from "../components/navBottom";
 import SidebarHomeMobile from "../components/sidebar";
 
-import { useSidebar } from "../context/SidebarContext.";
+import { useSidebar } from "../context/SidebarContext";
 
 export default function CollectionsPage() {
 	const { isOpen, handleOpenSidebarMobile } = useSidebar();

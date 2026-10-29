@@ -17,15 +17,12 @@ type SidebarContextType = {
 const SidebarContext =
 createContext<SidebarContextType | undefined>(undefined);
 
-export function SidebarProvider({ children }: {
-	children: ReactNode
-}) {
+export function SidebarProvider({ children }: {children: ReactNode }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	function handleOpenSidebarMobile() {
 		setIsOpen((prev) => !prev);
 	}
-
 	// lock scroll code ===
 	useEffect(() => {
 		document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -50,6 +47,5 @@ export function useSidebar() {
 	if (!context) {
 		throw new Error('useSibar harus digunakan di dalam SidebarProvider');
 	}
-
 	return context;
 }

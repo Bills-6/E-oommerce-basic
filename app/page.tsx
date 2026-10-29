@@ -17,7 +17,7 @@ import Footer from './components/footer';
 import NavBottomHome from './components/navBottom';
 import HeaderTop from './components/headerTop';
 
-import { useSidebar } from './context/SidebarContext.';
+import { useSidebar } from './context/SidebarContext';
 
 export default function Home() {
   const { isOpen, handleOpenSidebarMobile } = useSidebar();
