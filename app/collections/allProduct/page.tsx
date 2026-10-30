@@ -8,6 +8,8 @@ import HeaderTop from "@/app/components/headerTop";
 import HeaderNav from "@/app/components/base/headerNav";
 import { useSidebar } from "@/app/context/SidebarContext";
 import SidebarHomeMobile from "@/app/components/sidebar";
+import NavBottomHome from "@/app/components/navBottom";
+import BackTopBtn from "@/app/components/base/backTop";
 
 export default function AllProductPage() {
 	const { isOpen, handleOpenSidebarMobile } = useSidebar();
@@ -25,7 +27,7 @@ export default function AllProductPage() {
 
 				</aside>
 				<div className="allProductCards grid gap-4 md:grid-cols-2 md:gap-7 lg:grid-cols-1 lg:col-span-2">
-					<article className="allProductItem p-4 bg-sky-200 rounded-3xl shadow-xl w-[80%]">
+					<article className="allProductItem p-4 bg-sky-200 rounded-3xl shadow-xl lg:w-[80%]">
 						<img className="h-64 bg-zinc-50/80 rounded-2xl" src="/" alt="allProductPreview" />
 
 						{/* description product */}
@@ -65,6 +67,8 @@ export default function AllProductPage() {
 					</article>
 				</div>
 			</main>
+			<BackTopBtn />
+			<NavBottomHome />
 		</div>
 	);
 }
