@@ -8,7 +8,7 @@ import HeaderTop from "@/app/components/headerTop";
 import HeaderNav from "@/app/components/base/headerNav";
 import { useSidebar } from "@/app/context/SidebarContext";
 import SidebarHomeMobile from "@/app/components/sidebar";
-import NavBottomHome from "@/app/components/navBottom";
+import NavBottom from "@/app/components/navBottom";
 import BackTopBtn from "@/app/components/base/backTop";
 
 export default function AllProductPage() {
@@ -68,7 +68,7 @@ export default function AllProductPage() {
 				</div>
 			</main>
 			<BackTopBtn />
-			<NavBottomHome />
+			<NavBottom />
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 'use client';
-
+import Link from "next/link";
 
 //  HEADER NAV TYPES ===============
 type HeaderNavTypes = {

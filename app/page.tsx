@@ -14,22 +14,18 @@ import BestSellerPage from './components/bestSeller';
 import AboutPage from './components/aboutBrand';
 import NewSteller from './components/newsteller';
 import Footer from './components/footer';
-import NavBottomHome from './components/navBottom';
+import NavBottom from './components/navBottom';
 import HeaderTop from './components/headerTop';
 
 import { useSidebar } from './context/SidebarContext';
 
 export default function Home() {
   const { isOpen, handleOpenSidebarMobile } = useSidebar();
-
   return (
     <div className="root text-zinc-700">
       <SidebarHomeMobile active={isOpen} />
       <HeaderTop toggle={handleOpenSidebarMobile} />
-
-        {/* banner */}
         <Slider />
-
         <main>
           <section className='' aria-label='flashSalePage'>
               <LastestProducts/>
@@ -42,7 +38,7 @@ export default function Home() {
         </main>
 
         {/* navbar bottom mobile */}
-        <NavBottomHome />
+        <NavBottom />
     </div>
   );
 }
